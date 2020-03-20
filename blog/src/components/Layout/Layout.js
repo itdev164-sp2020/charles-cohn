@@ -5,13 +5,13 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-import styled, { ThemeProvider } from 'styled-components'
-import { Gray } from '../themes/Gray'
+import React from "./node_modules/react"
+import PropTypes from "./node_modules/prop-types"
+import { useStaticQuery, graphql } from "./node_modules/gatsby"
+import styled, { ThemeProvider } from './node_modules/styled-components'
+import { Gray } from '../../themes/Gray'
 import Header from "./header"
-import GlobalStyle from './GlobalStyle'
+import GlobalStyle from '../GlobalStyle'
 
 const Content = styled.div`
   margin: 0px auto;
@@ -51,4 +51,4 @@ Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default Layout
+export {Layout}

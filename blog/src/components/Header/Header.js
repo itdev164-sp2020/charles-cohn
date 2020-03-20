@@ -1,7 +1,7 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
-import styled from 'styled-components'
+import { Link } from "./node_modules/gatsby"
+import PropTypes from "./node_modules/prop-types"
+import React from "./node_modules/react"
+import styled from './node_modules/styled-components'
 
 const Outer = styled.header`
   background: ${props => props.theme.header.backgroundColor};
@@ -48,4 +48,4 @@ Header.defaultProps = {
   siteTitle: ``,
 }
 
-export default Header
+export {Header}
