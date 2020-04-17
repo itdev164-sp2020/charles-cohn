@@ -6,9 +6,9 @@ module.exports = {
   siteMetadata: {
     title: `Blog in SPACE!!`,
     description: `ITDEV-164 Gatsby Blog.`,
-    author: `Emily Merline`,
+    author: `Charles Cohn`,
     contact: {
-      name: `Emily Merline`,
+      name: `Charles Cohn`,
       company: `Blogs Inc.`,
       address: `PO Box 1234`
     }
