@@ -1,6 +1,6 @@
-import React from "./node_modules/react"
-import { useStaticQuery, graphql } from "./node_modules/gatsby"
-import Img from "./node_modules/gatsby-image"
+import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
@@ -29,4 +29,4 @@ const Image = () => {
   return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
 }
 
-export {Image}
+export { Image }

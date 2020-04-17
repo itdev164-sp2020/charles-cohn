@@ -5,19 +5,21 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "./node_modules/react"
-import PropTypes from "./node_modules/prop-types"
-import { useStaticQuery, graphql } from "./node_modules/gatsby"
-import styled, { ThemeProvider } from './node_modules/styled-components'
+import React from "react"
+import PropTypes from "prop-types"
+import { useStaticQuery, graphql } from "gatsby"
+import styled, { ThemeProvider } from 'styled-components'
 import { Gray } from '../../themes/Gray'
-import Header from "./header"
+import {Header} from "../Header"
 import GlobalStyle from '../GlobalStyle'
+import { Main } from '../Main'
+import { Footer } from '../Footer'
 
 const Content = styled.div`
-  margin: 0px auto;
+  margin: 0 auto;
   max-width: 960px;
-  padding: 0px 1.0875rem 1.45rem;
-  padding-top: 0px;
+  padding: 0 1.0875rem 1.45rem;
+  padding-top: 0;
 `
 
 const Layout = ({ children }) => {
@@ -33,16 +35,16 @@ const Layout = ({ children }) => {
 
   return (
     <ThemeProvider theme={Gray}>
-      <GlobalStyle />
+    <GlobalStyle />
       <Header siteTitle={data.site.siteMetadata.title} />
       <Content>
-        <main>{children}</main>
-        <footer>
+        <Main>{children}</Main>
+        <Footer>
           © {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </Content>
+        </Footer>
+        </Content>
     </ThemeProvider>
   )
 }
@@ -51,4 +53,4 @@ Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export {Layout}
+export { Layout }

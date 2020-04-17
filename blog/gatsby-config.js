@@ -1,25 +1,25 @@
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`
-});
+})
 
 module.exports = {
   siteMetadata: {
-    title: `My Cool Gatsby Blog`,
-    description: `Starting off the semester with a blog`,
-    author: `Charles Cohn`,
+    title: `Blog in SPACE!!`,
+    description: `ITDEV-164 Gatsby Blog.`,
+    author: `Emily Merline`,
     contact: {
-      name: `Charles Cohn`,
+      name: `Emily Merline`,
       company: `Blogs Inc.`,
-      address: `P.O. Box 1234`,
-    },
+      address: `PO Box 1234`
+    }
   },
   plugins: [
     {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: `${process.env.SPACE_ID}`,
-        accessToken: `${process.env.ACCESS_TOKEN}`        
-      },
+        accessToken: `${process.env.ACCESS_TOKEN}`
+      }
     },
     `gatsby-transformer-remark`,
     `gatsby-plugin-react-helmet`,
@@ -45,6 +45,7 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    'gatsby-plugin-offline',
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
